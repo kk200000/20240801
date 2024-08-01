@@ -7,7 +7,7 @@ import { saveAs } from 'file-saver'
 import { PDFDocument, degrees } from 'pdf-lib'
 import { v4 as uuidv4 } from 'uuid'
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.mjs`
 const PDFViewer = dynamic(() => import('./PDFViewer'), { ssr: false })
 
 const RotatePage = () => {

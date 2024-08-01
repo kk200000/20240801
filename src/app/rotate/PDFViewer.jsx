@@ -5,7 +5,7 @@ import { Button } from 'antd'
 import { ReloadOutlined } from '@ant-design/icons'
 import dynamic from 'next/dynamic'
 
-const PDFViewer = ({ files, rotation, onRotatePage,handleFileChange }) => {
+const PDFViewer = ({ files, rotation, onRotatePage, handleFileChange }) => {
   const [numPages, setNumPages] = useState({})
   const [pageRotations, setPageRotations] = useState({})
   const AddPDF = dynamic(() => import('./AddPDF'), { ssr: false })

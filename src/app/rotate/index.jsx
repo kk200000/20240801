@@ -19,7 +19,7 @@ const RotatePage = () => {
 
   const handleFileChange = (event) => {
     const selectedFile = event.target.files[0]
-   
+
     if (selectedFile && selectedFile.type === 'application/pdf') {
       setIsLoading(true)
       handleAddFile(selectedFile)
@@ -136,7 +136,7 @@ const RotatePage = () => {
             files={files}
             rotation={rotation}
             onRotatePage={handleRotatePage}
-            handleFileChange = {handleFileChange}
+            handleFileChange={handleFileChange}
           />
         </div>
       )}

@@ -33,7 +33,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/rotate/index.jsx"
-, "src/app/page.tsx"  ],
+, "src/app/page.tsx", "src/app/rotate/AddPDF.jsx"  ],
   "exclude": [
     "node_modules"
   ]

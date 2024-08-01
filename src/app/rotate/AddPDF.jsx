@@ -3,9 +3,9 @@ import { UploadOutlined } from '@ant-design/icons'
 import styles from './index.module.css'
 
 const AddPDF = ({ onAddFile }) => {
-  const inputRef = useRef(null)  // 使用ref让div具有点击input的效果
+  const inputRef = useRef(null) // 使用ref让div具有点击input的效果
 
-  const handleDivClick = (event) => {
+  const handleDivClick = () => {
     inputRef.current.click()
   }
 

@@ -1,15 +1,23 @@
-import React, { useState } from 'react'
-import { Button } from 'antd'
+import React, { useRef } from 'react'
 import { UploadOutlined } from '@ant-design/icons'
 import styles from './index.module.css'
 
 const AddPDF = ({ onAddFile }) => {
+  const inputRef = useRef(null)  // 使用ref让div具有点击input的效果
+
+  const handleDivClick = (event) => {
+    inputRef.current.click()
+  }
+
+  const handlleLabelClick = (event) => {
+    event.stopPropagation()
+  }
   return (
-    <div className={styles.addPDFContainer}>
-      <label className={styles.addButton}>
+    <div className={styles.addPDFContainer} onClick={handleDivClick}>
+      <label className={styles.addButton} onClick={handlleLabelClick}>
         <UploadOutlined />
-        <span>Add Another PDF</span>
         <input
+          ref={inputRef}
           type="file"
           accept="application/pdf"
           onChange={onAddFile}

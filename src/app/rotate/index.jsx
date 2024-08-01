@@ -10,7 +10,6 @@ import { v4 as uuidv4 } from 'uuid'
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`
 
 const PDFViewer = dynamic(() => import('./PDFViewer'), { ssr: false })
-const AddPDF = dynamic(() => import('./AddPDF'), { ssr: false })
 
 const RotatePage = () => {
   const [files, setFiles] = useState([])
@@ -132,14 +131,14 @@ const RotatePage = () => {
       </div>
       {isLoading && <div className={styles.loader}>加载中...</div>}
       {files.length > 0 && (
-        <>
+        <div className={styles.rowGroup}>
           <PDFViewer
             files={files}
             rotation={rotation}
             onRotatePage={handleRotatePage}
+            handleFileChange = {handleFileChange}
           />
-          <AddPDF onAddFile={handleFileChange} />
-        </>
+        </div>
       )}
       {files.length === 0 && (
         <div className={styles.dropZone}>

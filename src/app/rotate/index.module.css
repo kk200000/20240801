@@ -56,12 +56,18 @@
 .pdfViewer {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+}
+
+.fileContainer {
+  display: flex;
+  flex-direction: row; /* 设置为横向布局 */
+  overflow-x: auto; /* 允许横向滚动 */
+  width: 100%; /* 确保占满宽度 */
 }
 
 .pageContainer {
   position: relative;
-  border: 1px solid #ccc;
+  margin-right: 30px; /* 元素间距*/
 }
 
 .pageNumber {
@@ -110,6 +116,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0.5;
 }
 
 .fileName {
@@ -132,6 +139,32 @@
 
 /* 增加后 再次新增pdf */
 .addPDFContainer {
-  margin-top: 20px;
-  display: inline-block;
+  cursor: pointer;
+  display: flex;
+  background: rgb(229, 238, 255);
+  width: 200px;
+  min-width: 200px;
+  height: auto; /* 高度依赖于内容 */
+  max-height: 268px;
+  min-height: 268px;
+  margin: 10px;
+  margin-left: 30px;
+  flex-direction: column;
+  -moz-box-pack: center;
+  justify-content: center;
+  -moz-box-align: center;
+  align-items: center;
+  gap: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border: 1px dashed rgb(102, 153, 255);
+  border-radius: 4px;
+  color: rgb(102, 153, 255);
+  overflow-x: visible;
+  /* height: 268px; */
+}
+
+.rowGroup {
+  display: flex;
+  flex-wrap: wrap;
 }

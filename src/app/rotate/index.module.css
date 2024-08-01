@@ -1,0 +1,137 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #e9f5ff;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.loginButton {
+  background: none;
+  border: none;
+  color: #0070f3;
+  cursor: pointer;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.addButton,
+.rotateButton,
+.finishButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #0070f3;
+  color: white;
+}
+
+.finishButton {
+  background-color: #0070f3;
+  color: white;
+  margin-left: auto;
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.pdfViewer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.pageContainer {
+  position: relative;
+  border: 1px solid #ccc;
+}
+
+.pageNumber {
+  text-align: center;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(163, 163, 163);
+}
+
+.dropZone {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+.loader {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #0070f3;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #0070f3;
+  color: white;
+}
+
+.rotateButton:disabled,
+.finishButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.centerRotateButton {
+  z-index: 999;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fileName {
+  text-align: center;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-width: 0px;
+  padding: 0px 8px;
+  border-radius: 4px;
+  max-width: 100%;
+  color: rgb(102, 36, 47);
+  background-color: rgba(255, 89, 117, 0.3);
+  /* 此处随机颜色 */
+}
+
+/* 增加后 再次新增pdf */
+.addPDFContainer {
+  margin-top: 20px;
+  display: inline-block;
+}

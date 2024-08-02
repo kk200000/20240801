@@ -7,18 +7,6 @@ import { saveAs } from 'file-saver'
 import { PDFDocument, degrees } from 'pdf-lib'
 import { v4 as uuidv4 } from 'uuid'
 
-if (typeof Promise.withResolvers === 'undefined') {
-  if (window)
-      
-      window.Promise.withResolvers = function () {
-          let resolve, reject;
-          const promise = new Promise((res, rej) => {
-              resolve = res;
-              reject = rej;
-          });
-          return { promise, resolve, reject };
-      };
-}
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.mjs`
 // pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.mjs` //这里调用legacy里面的旧版方法兼容
 const PDFViewer = dynamic(() => import('./PDFViewer'), { ssr: false })
